@@ -63,7 +63,6 @@ export class UpdateAddressHandler
         id,
       },
       data: {
-        ...address,
         ...rest,
         city: {
           connect: {

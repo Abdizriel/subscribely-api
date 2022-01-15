@@ -98,7 +98,7 @@ export class AddressController {
 
   @UseInterceptors(new TransformInterceptor(AddressDto))
   @ApiBearerAuth()
-  @Post(':id')
+  @Post()
   public async createAddress(
     @Request() req,
     @Body() payload: CreateAddressDto,
