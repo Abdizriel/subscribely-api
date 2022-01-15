@@ -1,0 +1,12 @@
+{
+  "internal": "Internal server error",
+  "unauthorized": "Unauthorized",
+  "user": {
+    "not_found": "User not found",
+    "already_exists": "User already exists"
+  },
+  "token": {
+    "invalid": "Invalid token",
+    "expired": "Token has expired"
+  }
+}
