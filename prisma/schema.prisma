@@ -10,6 +10,54 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model City {
+  id                String            @default(uuid()) @id
+  name              String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  addresses         Address[]
+}
+
+model Country {
+  id                String            @default(uuid()) @id
+  iso               String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  addresses         Address[]
+}
+
+model Address {
+  id                String            @default(uuid()) @id
+  name              String
+  street            String
+  number            String
+  apartment         String?
+  postalCode        String
+
+  latitude          Float?
+  longitude         Float?
+
+  cityId            String
+  countryId         String
+  userId            String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  city              City              @relation(fields: [cityId], references: [id])
+  country           Country           @relation(fields: [countryId], references: [id])
+  user              User              @relation(fields: [userId], references: [id])
+
+  metadata          Json?
+}
+
 model Account {
   id                String            @default(uuid()) @id
 
@@ -20,26 +68,134 @@ model Account {
   users             User[]
 }
 
+model Category {
+  id                String            @default(uuid()) @id
+  slug              String
+  name              String
+  description       String?
+
+  parentId          String?
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  parent            Category?         @relation("CategoryParent", fields: [parentId], references: [id])
+  childrens         Category[]        @relation("CategoryParent")
+  products          Product[]
+
+  metadata          Json?
+}
+
 model User {
-  id                String    @default(uuid()) @id
+  id                String            @default(uuid()) @id
   firstName         String
   lastName          String
-  email             String    @unique
+  email             String            @unique
   password          String
-  role              UserRole  @default(USER)
-  isConfirmed       Boolean   @default(false)
+  role              UserRole          @default(USER)
+  isConfirmed       Boolean           @default(false)
 
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
-  deletedAt  DateTime?
-
-  account           Account   @relation(fields: [accountId], references: [id])
   accountId         String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  account           Account           @relation(fields: [accountId], references: [id])
   tokens            Token[]
+  addresses         Address[]
+
+  metadata          Json?
 }
 
 enum UserRole {
   USER
+}
+
+model Product {
+  id                String            @default(uuid()) @id
+  name              String
+  slug              String
+  sku               String?
+  description       String?
+  price             Float
+  inventory         Int?
+  isActive          Boolean           @default(false)
+  sortOrder         Int?
+
+  categoryId        String?
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  category          Category?         @relation(fields: [categoryId], references: [id])
+  optionGroups      OptionGroup[]
+
+  metadata          Json?
+}
+
+model Variant {
+  id                String            @default(uuid()) @id
+  name              String
+  sku               String?
+  price             Float?
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  options           OptionsOnVariant[]
+
+  metadata          Json?
+}
+
+model OptionsOnVariant {
+  variantId         String
+  optionId          String
+
+  assignedAt        DateTime          @default(now())
+
+  variant           Variant           @relation(fields: [variantId], references: [id])
+  option            Option            @relation(fields: [optionId], references: [id])
+
+  @@id([variantId, optionId])
+}
+
+model OptionGroup {
+  id                String            @default(uuid()) @id
+  name              String
+  isActive          Boolean           @default(false)
+
+  productId         String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  metadata          Json?
+
+  options           Option[]
+  product           Product           @relation(fields: [productId], references: [id])
+}
+
+model Option {
+  id                String            @default(uuid()) @id
+  name              String
+  price             Float
+  isActive          Boolean           @default(false)
+
+  optionGroupId     String
+
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+
+  optionGroup       OptionGroup[]
+  variants          OptionsOnVariant[]
+
+  metadata          Json?
 }
 
 model Feature {
@@ -53,18 +209,18 @@ model Feature {
 }
 
 model Token {
-  id          String    @default(uuid()) @id
-  type        TokenType
-  isValid     Boolean   @default(true)
-  token       String
-  expireAt    DateTime
+  id                String            @default(uuid()) @id
+  type              TokenType
+  isValid           Boolean           @default(true)
+  token             String
+  expireAt          DateTime
 
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  deletedAt   DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
  
-  user        User @relation(fields: [userId], references: [id])
-  userId      String
+  user              User              @relation(fields: [userId], references: [id])
+  userId            String
 }
 
 enum TokenType {

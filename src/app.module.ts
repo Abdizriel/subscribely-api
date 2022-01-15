@@ -9,6 +9,7 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
 import { CoreModule, ResponseTransformInterceptor } from '@subscribely/core';
 
 import { AccountModule } from './account/account.module';
+import { AddressModule } from './address/address.module';
 import { AuthModule } from './auth/auth.module';
 import { CommunicationModule } from './communication/communication.module';
 import { FeatureModule } from './feature/feature.module';
@@ -17,6 +18,7 @@ import { HealthModule } from './health/health.module';
 @Module({
   imports: [
     AccountModule,
+    AddressModule,
     AuthModule,
     CoreModule,
     CommunicationModule,
