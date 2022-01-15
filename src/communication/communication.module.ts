@@ -6,7 +6,7 @@ import * as path from 'path';
 import { Module } from '@nestjs/common';
 import { CqrsModule } from '@nestjs/cqrs';
 
-import { ConfigService } from '@xyz/core';
+import { ConfigService } from '@subscribely/core';
 
 import { EventHandlers } from './events/handlers';
 import { MailingRepository } from './repositories';

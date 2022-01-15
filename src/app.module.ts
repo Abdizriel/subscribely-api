@@ -6,7 +6,7 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
 import { CqrsModule } from '@nestjs/cqrs';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 
-import { CoreModule, ResponseTransformInterceptor } from '@xyz/core';
+import { CoreModule, ResponseTransformInterceptor } from '@subscribely/core';
 
 import { AccountModule } from './account/account.module';
 import { AuthModule } from './auth/auth.module';

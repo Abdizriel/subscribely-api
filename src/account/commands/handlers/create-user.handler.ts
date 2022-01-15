@@ -3,9 +3,9 @@ import { generate } from 'generate-password';
 
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 
-import { UserDto } from '@xyz/contracts';
-import { ConfigService, LoggerService } from '@xyz/core';
-import { UserAlreadyExistsException } from '@xyz/exceptions';
+import { UserDto } from '@subscribely/contracts';
+import { ConfigService, LoggerService } from '@subscribely/core';
+import { UserAlreadyExistsException } from '@subscribely/exceptions';
 
 import { UserRepository } from '../../repositories';
 import { CreateUserCommand } from '../impl';

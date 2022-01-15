@@ -1,7 +1,7 @@
 import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
 
-import { UserDto } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
+import { UserDto } from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
 
 import { UserRepository } from '../../repositories';
 import { GetUserByIdQuery } from '../impl';

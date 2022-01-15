@@ -2,7 +2,7 @@ import { InjectTwilio, TwilioClient } from 'nestjs-twilio';
 
 import { Injectable } from '@nestjs/common';
 
-import { ConfigService, LoggerService } from '@xyz/core';
+import { ConfigService, LoggerService } from '@subscribely/core';
 
 interface SendMessage {
   body: string;

@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
 
-import { FeatureDto } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
+import { FeatureDto } from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
 
 import { GetFeaturesQuery } from '../queries/impl';
 

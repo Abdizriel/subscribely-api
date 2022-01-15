@@ -5,7 +5,7 @@ import mjml2html from 'mjml';
 
 import { Injectable } from '@nestjs/common';
 
-import { ConfigService, LoggerService } from '@xyz/core';
+import { ConfigService, LoggerService } from '@subscribely/core';
 
 interface SendMail {
   template: string;

@@ -18,8 +18,12 @@ import {
   GetUsersResponseDto,
   UpdateUserDto,
   UserDto,
-} from '@xyz/contracts';
-import { JwtAuthGuard, LoggerService, TransformInterceptor } from '@xyz/core';
+} from '@subscribely/contracts';
+import {
+  JwtAuthGuard,
+  LoggerService,
+  TransformInterceptor,
+} from '@subscribely/core';
 
 import { UserService } from '../services';
 

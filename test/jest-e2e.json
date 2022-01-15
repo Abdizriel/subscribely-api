@@ -7,11 +7,11 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "moduleNameMapper": {
-    "@xyz/core/(.*)": "<rootDir>/../libs/core/src/$1",
-    "@xyz/core": "<rootDir>/../libs/core/src",
-    "@xyz/contracts/(.*)": "<rootDir>/../libs/contracts/src/$1",
-    "@xyz/contracts": "<rootDir>/../libs/contracts/src",
-    "@xyz/exceptions/(.*)": "<rootDir>/../libs/exceptions/src/$1",
-    "@xyz/exceptions": "<rootDir>/../libs/exceptions/src"
+    "@subscribely/core/(.*)": "<rootDir>/../libs/core/src/$1",
+    "@subscribely/core": "<rootDir>/../libs/core/src",
+    "@subscribely/contracts/(.*)": "<rootDir>/../libs/contracts/src/$1",
+    "@subscribely/contracts": "<rootDir>/../libs/contracts/src",
+    "@subscribely/exceptions/(.*)": "<rootDir>/../libs/exceptions/src/$1",
+    "@subscribely/exceptions": "<rootDir>/../libs/exceptions/src"
   }
 }

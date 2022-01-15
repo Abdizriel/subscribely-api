@@ -14,12 +14,12 @@
     "incremental": true,
     "skipLibCheck": true,
     "paths": {
-      "@xyz/core": ["libs/core/src"],
-      "@xyz/core/*": ["libs/core/src/*"],
-      "@xyz/contracts": ["libs/contracts/src"],
-      "@xyz/contracts/*": ["libs/contracts/src/*"],
-      "@xyz/exceptions": ["libs/exceptions/src"],
-      "@xyz/exceptions/*": ["libs/exceptions/src/*"]
+      "@subscribely/core": ["libs/core/src"],
+      "@subscribely/core/*": ["libs/core/src/*"],
+      "@subscribely/contracts": ["libs/contracts/src"],
+      "@subscribely/contracts/*": ["libs/contracts/src/*"],
+      "@subscribely/exceptions": ["libs/exceptions/src"],
+      "@subscribely/exceptions/*": ["libs/exceptions/src/*"]
     }
   }
 }

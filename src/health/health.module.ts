@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TerminusModule } from '@nestjs/terminus';
 
-import { CoreModule } from '@xyz/core';
+import { CoreModule } from '@subscribely/core';
 
 import { HealthController } from './controllers';
 

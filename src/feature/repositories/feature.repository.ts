@@ -2,7 +2,7 @@ import { Feature } from '@prisma/client';
 
 import { Injectable } from '@nestjs/common';
 
-import { PrismaService } from '@xyz/core';
+import { PrismaService } from '@subscribely/core';
 
 @Injectable()
 export class FeatureRepository {

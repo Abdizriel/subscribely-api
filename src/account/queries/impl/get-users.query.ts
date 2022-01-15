@@ -1,6 +1,6 @@
 import { IQuery } from '@nestjs/cqrs';
 
-import { GetUsersDto } from '@xyz/contracts';
+import { GetUsersDto } from '@subscribely/contracts';
 
 export class GetUsersQuery implements IQuery {
   constructor(public readonly payload: GetUsersDto) {}

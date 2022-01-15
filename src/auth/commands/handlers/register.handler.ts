@@ -4,9 +4,13 @@ import { add } from 'date-fns';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 
-import { RegisteredEvent, RegisteredEventName, UserDto } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
-import { UserAlreadyExistsException } from '@xyz/exceptions/account/user-already-exists.exception';
+import {
+  RegisteredEvent,
+  RegisteredEventName,
+  UserDto,
+} from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
+import { UserAlreadyExistsException } from '@subscribely/exceptions/account/user-already-exists.exception';
 
 import { UserService } from '../../../account/services';
 import { TokenRepository } from '../../repositories';

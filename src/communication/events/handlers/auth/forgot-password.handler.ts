@@ -3,8 +3,11 @@ import { I18nService } from 'nestjs-i18n';
 import { Injectable } from '@nestjs/common';
 import { OnEvent } from '@nestjs/event-emitter';
 
-import { ForgotPasswordEvent, ForgotPasswordEventName } from '@xyz/contracts';
-import { ConfigService, LoggerService } from '@xyz/core';
+import {
+  ForgotPasswordEvent,
+  ForgotPasswordEventName,
+} from '@subscribely/contracts';
+import { ConfigService, LoggerService } from '@subscribely/core';
 
 import { MailingRepository } from '../../../repositories';
 

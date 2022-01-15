@@ -6,9 +6,9 @@ import {
   GetUsersDto,
   UpdateUserDto,
   UserDto,
-} from '@xyz/contracts';
-import { PaginatedDataDto } from '@xyz/contracts/common';
-import { LoggerService } from '@xyz/core';
+} from '@subscribely/contracts';
+import { PaginatedDataDto } from '@subscribely/contracts/common';
+import { LoggerService } from '@subscribely/core';
 
 import {
   CreateUserCommand,

@@ -4,13 +4,13 @@ import { isAfter } from 'date-fns';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 
-import { ConfirmedEvent, ConfirmedEventName } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
+import { ConfirmedEvent, ConfirmedEventName } from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
 import {
   TokenExpiredException,
   TokenInvalidException,
   UserNotFoundException,
-} from '@xyz/exceptions';
+} from '@subscribely/exceptions';
 
 import { UserService } from '../../../account/services';
 import { TokenRepository } from '../../repositories';

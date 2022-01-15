@@ -27,8 +27,8 @@ import {
   RegisterResponseDto,
   ResetPasswordDto,
   ResetPasswordResponseDto,
-} from '@xyz/contracts';
-import { LocalAuthGuard, TransformInterceptor } from '@xyz/core';
+} from '@subscribely/contracts';
+import { LocalAuthGuard, TransformInterceptor } from '@subscribely/core';
 
 import { AuthService } from '../services';
 

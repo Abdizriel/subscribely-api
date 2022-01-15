@@ -1,8 +1,8 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 
-import { UserDto } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
-import { UserNotFoundException } from '@xyz/exceptions';
+import { UserDto } from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
+import { UserNotFoundException } from '@subscribely/exceptions';
 
 import { UserRepository } from '../../repositories';
 import { UpdateUserCommand } from '../impl';

@@ -7,9 +7,9 @@ import { EventEmitter2 } from '@nestjs/event-emitter';
 import {
   ForgotPasswordEvent,
   ForgotPasswordEventName,
-} from '@xyz/contracts/auth/events/forgot-password.event';
-import { LoggerService } from '@xyz/core';
-import { UserNotFoundException } from '@xyz/exceptions';
+} from '@subscribely/contracts/auth/events/forgot-password.event';
+import { LoggerService } from '@subscribely/core';
+import { UserNotFoundException } from '@subscribely/exceptions';
 
 import { UserService } from '../../../account/services';
 import { TokenRepository } from '../../repositories';

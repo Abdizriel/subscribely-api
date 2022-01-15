@@ -4,7 +4,7 @@
   "singleQuote": true,
   "useTabs": false,
   "semi": true,
-  "importOrder": ["^@nestjs/(.*)$", "^@xyz/(.*)$", "^[./]"],
+  "importOrder": ["^@nestjs/(.*)$", "^@subscribely/(.*)$", "^[./]"],
   "importOrderParserPlugins": ["typescript", "decorators-legacy"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true

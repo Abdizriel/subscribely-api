@@ -1,8 +1,8 @@
 {
-  "name": "nest-starter",
+  "name": "subscribely-api",
   "private": true,
-  "version": "1.1.2",
-  "description": "Nest TypeScript starter repository",
+  "version": "1.0.0",
+  "description": "Subscribely API",
   "author": "Marcin Mrotek <kontakt@marcinmrotek.pl>",
   "license": "MIT",
   "scripts": {
@@ -123,9 +123,9 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@xyz/core(|/.*)$": "<rootDir>/libs/core/src/$1",
-      "^@xyz/contracts(|/.*)$": "<rootDir>/libs/contracts/src/$1",
-      "^@xyz/exceptions(|/.*)$": "<rootDir>/libs/exceptions/src/$1"
+      "^@subscribely/core(|/.*)$": "<rootDir>/libs/core/src/$1",
+      "^@subscribely/contracts(|/.*)$": "<rootDir>/libs/contracts/src/$1",
+      "^@subscribely/exceptions(|/.*)$": "<rootDir>/libs/exceptions/src/$1"
     }
   },
   "lint-staged": {

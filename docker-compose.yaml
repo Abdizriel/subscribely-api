@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   db:
-    container_name: xyz-postgres
+    container_name: subscribely-postgres
     image: 'postgres:14'
     ports:
       - 6432:5432
@@ -19,7 +19,7 @@ services:
       - ./infra/postgresql/init:/docker-entrypoint-initdb.d/
 
   mailhog:
-    container_name: xyz-mailhog
+    container_name: subscribely-mailhog
     image: mailhog/mailhog
     ports:
       - 1030:1025

@@ -3,7 +3,7 @@ import { CqrsModule } from '@nestjs/cqrs';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 
-import { ConfigService } from '@xyz/core';
+import { ConfigService } from '@subscribely/core';
 
 import { AccountModule } from '../account/account.module';
 import { UserService } from '../account/services';

@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { HealthCheck, HealthCheckService } from '@nestjs/terminus';
 
-import { LoggerService } from '@xyz/core';
+import { LoggerService } from '@subscribely/core';
 
 @ApiTags('Health')
 @Controller('health')

@@ -15,8 +15,8 @@ import {
   ResetPasswordDto,
   ResetPasswordResponseDto,
   UserDto,
-} from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
+} from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
 
 import { UserService } from '../../account/services';
 import {

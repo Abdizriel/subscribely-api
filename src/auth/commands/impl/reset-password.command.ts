@@ -1,6 +1,6 @@
 import { ICommand } from '@nestjs/cqrs';
 
-import { ResetPasswordDto } from '@xyz/contracts';
+import { ResetPasswordDto } from '@subscribely/contracts';
 
 export class ResetPasswordCommand implements ICommand {
   constructor(public readonly payload: ResetPasswordDto) {}

@@ -10,13 +10,13 @@ import {
   PasswordResetedEvent,
   PasswordResetedEventName,
   ResetPasswordResponseDto,
-} from '@xyz/contracts';
-import { ConfigService, LoggerService } from '@xyz/core';
+} from '@subscribely/contracts';
+import { ConfigService, LoggerService } from '@subscribely/core';
 import {
   TokenExpiredException,
   TokenInvalidException,
   UserNotFoundException,
-} from '@xyz/exceptions';
+} from '@subscribely/exceptions';
 
 import { UserService } from '../../../account/services';
 import { TokenRepository } from '../../repositories';

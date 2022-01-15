@@ -17,7 +17,7 @@ import {
   CoreModule,
   HttpExceptionFilter,
   LoggerService,
-} from '@xyz/core';
+} from '@subscribely/core';
 
 import { AppModule } from './app.module';
 
@@ -66,8 +66,8 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('XYZ')
-    .setDescription('The API description of XYZ')
+    .setTitle('Subscribely API')
+    .setDescription('The API description of Subscribely')
     .setVersion('1.0')
     .addSecurity('bearer', {
       type: 'http',

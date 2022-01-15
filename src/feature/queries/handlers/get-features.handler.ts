@@ -1,7 +1,7 @@
 import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
 
-import { FeatureDto } from '@xyz/contracts';
-import { LoggerService } from '@xyz/core';
+import { FeatureDto } from '@subscribely/contracts';
+import { LoggerService } from '@subscribely/core';
 
 import { FeatureRepository } from '../../repositories';
 import { GetFeaturesQuery } from '../impl';

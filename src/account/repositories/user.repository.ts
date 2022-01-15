@@ -2,7 +2,7 @@ import { Prisma, User } from '@prisma/client';
 
 import { Injectable } from '@nestjs/common';
 
-import { PrismaService } from '@xyz/core';
+import { PrismaService } from '@subscribely/core';
 
 export type UserFindOptions = {
   skip?: number;
